@@ -1,0 +1,57 @@
+<div class="card text-center my-5 ">
+    <div class="card-header ">
+        <h3><strong>{{cliente.ragioneSociale}}</strong></h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Partita IVA</th>
+                    <th scope="col">Tipo Cliente</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Pec</th>
+                    <th scope="col">Telefono</th>
+                    <th scope="col">Fatturato Annuale</th>
+                
+                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{cliente.id}}</td>
+                    <td>{{cliente.partitaIva}}</td>
+                    <td>{{cliente.tipoCliente}}</td>
+                    <td>{{cliente.email}}</td>
+                    <td>{{cliente.pec}}</td>
+                    <td>{{cliente.telefono}}</td>
+                    <td>{{cliente.fatturatoAnnuale}}</td>
+                   
+                    
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Data Inserimento</th>
+                    <th scope="col">Data Ultimo Contatto</th>
+                    <th scope="col">Indirizzo Sede Operativa</th>
+                    <th scope="col">Indirizzo Sede Legale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{cliente.dataInserimento}}</td>
+                    <td>{{cliente.dataUltimoContatto}}</td>
+                    <td>{{cliente.indirizzoSedeOperativa.via}} | {{cliente.indirizzoSedeOperativa.localita}} | {{cliente.indirizzoSedeOperativa.comune.nome}}</td>
+                    <td>{{cliente.indirizzoSedeLegale.via}} | {{cliente.indirizzoSedeLegale.localita}} | {{cliente.indirizzoSedeLegale.comune.nome}}</td>
+
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" (click)="goToEdit(cliente.id)">Modifica</button>
+    </div>
+</div>

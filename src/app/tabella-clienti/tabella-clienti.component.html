@@ -1,0 +1,34 @@
+<table class="table table-primary table-striped my-5 text-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Ragione Sociale</th>
+      <th scope="col">Nome</th>
+      <th scope="col">Cognome</th>
+      <th scope="col">Telefono Contatto</th>
+      <th scope="col">Email Contatto</th>
+      <th scope="col"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of listaClienti">
+      <th>{{item.id}}</th>
+      <th>{{item.ragioneSociale}}</th>
+      <td>{{item.nomeContatto}}</td>
+      <td>{{item.cognomeContatto}}</td>
+      <td>{{item.telefono}}</td>
+      <td>{{item.emailContatto}}</td>
+      <td>
+        <button type="button" class="btn btn-success btn-sm" (click)="detailCliente(item.id)">
+          <i class="bi bi-info-square-fill"></i></button>
+      </td>
+      <td>
+        <button type="button" class="btn btn-danger btn-sm" (click)="deleteCliente(item)">
+          <i class="bi bi-trash-fill"></i>
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  

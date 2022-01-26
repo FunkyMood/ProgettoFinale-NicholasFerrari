@@ -1,0 +1,36 @@
+<table class="table table-primary table-striped my-5 text-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Data</th>
+        <th scope="col">Numero</th>
+        <th scope="col">Anno</th>
+        <th scope="col">Importo</th>
+        <th scope="col">Stato</th>
+        <th scope="col">Cliente</th>
+        <th scope="col"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of listaFatture">
+        <th>{{item.id}}</th>
+        <th>{{item.data}}</th>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>
+          <button type="button" class="btn btn-success btn-sm">
+            <i class="bi bi-info-square-fill"></i></button>
+        </td>
+        <td>
+          <button type="button" class="btn btn-danger btn-sm" >
+            <i class="bi bi-trash-fill"></i>
+          </button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+    
