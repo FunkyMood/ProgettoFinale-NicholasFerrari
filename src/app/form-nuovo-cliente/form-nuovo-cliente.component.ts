@@ -13,6 +13,7 @@ import { ClientiService } from '../Services/clienti.service';
 export class FormNuovoClienteComponent implements OnInit {
 
   cliente: NewCliente = new NewCliente();
+
  
   tipiCliente:any = [];
   comuni:any = [];

@@ -15,20 +15,16 @@
       <tr *ngFor="let item of listaFatture">
         <th>{{item.id}}</th>
         <th>{{item.data}}</th>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>{{item.numero}}</td>
+        <td>{{item.anno}}</td>
+        <td>{{item.importo}}</td>
+        <td>{{item.stato.nome}}</td>
+        <td>{{item.cliente.ragioneSociale}}</td>
         <td>
           <button type="button" class="btn btn-success btn-sm">
             <i class="bi bi-info-square-fill"></i></button>
         </td>
-        <td>
-          <button type="button" class="btn btn-danger btn-sm" >
-            <i class="bi bi-trash-fill"></i>
-          </button>
-        </td>
+      
       </tr>
     </tbody>
   </table>

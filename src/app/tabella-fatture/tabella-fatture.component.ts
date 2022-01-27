@@ -9,12 +9,12 @@ import { FattureService } from '../Services/fatture.service';
 })
 export class TabellaFattureComponent implements OnInit {
 
-  listaFatture:Fattura[] = [];
+  listaFatture:any = [];
 
   constructor(private fattureService: FattureService) { }
 
   ngOnInit(): void {
-    this.fattureService.getAllFatture().subscribe(params => this.listaFatture = params.content, );
+    this.fattureService.getAllFatture().subscribe(params => this.listaFatture = params.content );
 
     
   }
