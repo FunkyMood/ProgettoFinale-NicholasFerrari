@@ -37,8 +37,8 @@ export class ClientiService {
     return this.http.get<Comuni>(environment.getComuni);
   }
 
-  putClienteEdit(id:number, cliente:Cliente){
-    return this.http.put<Cliente>(environment.putClienteEdit + id, cliente);
+  putClienteEdit(cliente:Cliente){
+    return this.http.put<Cliente>(environment.putClienteEdit + cliente.id, cliente);
   }
 
 

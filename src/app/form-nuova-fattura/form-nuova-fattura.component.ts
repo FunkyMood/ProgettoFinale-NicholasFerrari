@@ -3,6 +3,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from '../Classes/cliente';
 import { Fattura } from '../Classes/fattura';
 import { StatoFattura } from '../Classes/stato-fattura';
+import { ClientiService } from '../Services/clienti.service';
 import { FattureService } from '../Services/fatture.service';
 
 @Component({
@@ -20,11 +21,16 @@ export class FormNuovaFatturaComponent implements OnInit {
     private fatturaService: FattureService,
     private router: Router,
     private route: ActivatedRoute,
+    private clientiService: ClientiService,
   ) { }
 
   ngOnInit(): void {
-    this.fatturaService.getStatoFattura(this.fattura.id).subscribe(params => console.log(params));
-    this.fatturaService.getFatturaByCliente().subscribe(params => this.cliente = params);
+    this.fatturaService.getStatoFattura().subscribe(params => this.statofattura = params.content);
+    this.clientiService.getAllClienti().subscribe(params => this.cliente = params.content);
     
+  }
+  addFattura(){
+    this.fatturaService.postFattura(this.fattura);
+    this.router.navigate(['fatture']);
   }
 }

@@ -19,6 +19,7 @@ import { FatturaDetailComponent } from './fattura-detail/fattura-detail.componen
 import { ClienteFatturaComponent } from './cliente-fattura/cliente-fattura.component';
 import { FatturaEditComponent } from './fattura-edit/fattura-edit.component';
 import { FormNuovaFatturaComponent } from './form-nuova-fattura/form-nuova-fattura.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FormNuovaFatturaComponent } from './form-nuova-fattura/form-nuova-fattu
     AppRoutingModule,
     NgbModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule
   ],
   providers: [{
     provide:HTTP_INTERCEPTORS,

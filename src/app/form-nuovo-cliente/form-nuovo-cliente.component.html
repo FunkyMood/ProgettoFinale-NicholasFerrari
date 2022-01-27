@@ -77,10 +77,10 @@
 
                         <div class="form-group col-sm-6 flex-column d-flex">
                             <label class="form-control-label mx-3"><strong>Indirizzo Sede Legale</strong><span class="text-danger">*</span></label>
-                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.via" name="viasedeoperativa" placeholder="Inserisci Via Sede Operativa" required>
-                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.civico" name="civico_sedeoperativa" placeholder="Inserisci Civico Sede Operativa" required>
-                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.cap" name="cap_sedeoperativa" placeholder="Inserisci CAP Sede Operativa" required>
-                            <input type="text" class="my-2"  [(ngModel)]="cliente.indirizzoSedeLegale.localita" name="località_sedeoperativa" placeholder="Inserisci Località Sede Operativa" required>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.via" name="viasedeoperativa" placeholder="Inserisci Via Sede Legale" required>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.civico" name="civico_sedeoperativa" placeholder="Inserisci Civico Sede Legale" required>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.cap" name="cap_sedeoperativa" placeholder="Inserisci CAP Sede Legale" required>
+                            <input type="text" class="my-2"  [(ngModel)]="cliente.indirizzoSedeLegale.localita" name="località_sedeoperativa" placeholder="Inserisci Località Sede Legale" required>
                             <div class="form-floating ">
                                 <label for="floatingSelect"><strong>Scegli Comune di appartenenza</strong></label><br>
                                 <select class="form-select" [(ngModel)]="cliente.indirizzoSedeLegale.comune" [ngModelOptions]="{standalone:true}">

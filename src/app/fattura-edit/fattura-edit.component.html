@@ -1,0 +1,55 @@
+
+<div class="container-fluid  px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3 class="mb-5">Modifica Fattura</h3>
+            <div class="card" id="main">
+                <h5 class="text-center mb-4 my-2 ">Inserisci i dati della Nuova Fattura</h5>
+                <form class="form-card mx-4">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Data</strong><span class="text-danger">*</span></label>
+                            <input type="text" [(ngModel)]="fattura.data" name="fattura_data" placeholder="Inserisci la data" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Numero</strong><span class="text-danger">*</span></label>
+                            <input type="text" [(ngModel)]="fattura.numero" name="fattura:numero" placeholder="Inserisci numero fattura" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Anno</strong><span class="text-danger">*</span></label>
+                            <input type="text" [(ngModel)]="fattura.anno" name="fattura_anno" placeholder="Inserisci anno fattura" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Importo</strong><span class="text-danger">*</span></label>
+                            <input type="text" [(ngModel)]="fattura.importo" name="fattura_importo" placeholder="Inserisci importo fattura" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <div class="form-floating">
+                                <label for="floatingSelect"><strong>Scegli Stato Fattura</strong></label><br>
+                                <select class="form-select" [(ngModel)]="fattura.stato.nome" [ngModelOptions]="{standalone:true}">
+                                 <option *ngFor="let data of statofattura" [ngValue]="data">{{data.nome}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                           
+                            <div class="form-floating ">
+                                <label for="floatingSelect"><strong>Scegli Cliente</strong></label><br>
+                                <select class="form-select" [(ngModel)]="fattura.cliente" [ngModelOptions]="{standalone:true}">
+                                 <option *ngFor="let data of cliente" [ngValue]="data">{{data.ragioneSociale}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn my-2" (click)="modificaFattura()" >Inserisci Nuova fattura</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

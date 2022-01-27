@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { Cliente } from '../Classes/cliente';
 import { Fattura } from '../Classes/fattura';
-import { StatoFattura } from '../Classes/stato-fattura';
 import { Fatture } from '../Interfaces/fatture';
+import { StatiFattura } from '../Interfaces/stati-fattura';
 
 @Injectable({
   providedIn: 'root'
@@ -24,7 +24,15 @@ export class FattureService {
     return this.http.get<Cliente[]>(environment.getfatturaByCliente)
   }
 
-  getStatoFattura(id:number){
-    return this.http.get<StatoFattura>('http://epicode.online/epicodebeservice_v2/api/clienti/api/fatture/stato/' + id +'?page=0&size=20&sort=id,ASC');
+  getStatoFattura(){
+    return this.http.get<StatiFattura>(environment.getStatoFattura);
+  }
+
+  postFattura(fattura:Fattura){
+    return this.http.post<Fattura>(environment.postFattura, fattura)
+  }
+
+  putFatturaEdit(fattura:Fattura){
+    return this.http.put<Fattura>(environment.putFatturaEdit + fattura.id, fattura);
   }
 }

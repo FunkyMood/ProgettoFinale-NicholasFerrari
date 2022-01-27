@@ -31,7 +31,7 @@ export class FormNuovoClienteComponent implements OnInit {
   }
 
   addNuovoCliente(){
-    this.clienteService.postNuovoCliente(this.cliente).subscribe(response => console.log(response));
+    this.clienteService.postNuovoCliente(this.cliente);
     this.router.navigate(['']);
   }
 

@@ -40,13 +40,13 @@
                            
                             <div class="form-floating ">
                                 <label for="floatingSelect"><strong>Scegli Cliente</strong></label><br>
-                                <select class="form-select" [(ngModel)]="fattura.cliente.ragioneSociale" [ngModelOptions]="{standalone:true}">
-                                 <option *ngFor="let data of cliente" [ngValue]="data">{{data}}</option>
+                                <select class="form-select" [(ngModel)]="fattura.cliente" [ngModelOptions]="{standalone:true}">
+                                 <option *ngFor="let data of cliente" [ngValue]="data">{{data.ragioneSociale}}</option>
                                 </select>
                             </div>
                         </div>
                     </div>
-                    <button type="button" class="btn my-2"  >Inserisci Nuova fattura</button>
+                    <button type="button" class="btn my-2" (click)="addFattura()" >Inserisci Nuova fattura</button>
 
                 </form>
             </div>

@@ -32,8 +32,8 @@ export class ClienteEditComponent implements OnInit {
     });
   }
 
-  modificaCliente(id:number,cliente:Cliente ){
-    this.clientiService.putClienteEdit(id,cliente);
+  modificaCliente(){
+    this.clientiService.putClienteEdit(this.cliente).subscribe(response => console.log(response));
     this.router.navigate(['']);
   }
 
