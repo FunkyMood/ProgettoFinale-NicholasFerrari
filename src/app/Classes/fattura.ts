@@ -1,4 +1,5 @@
 import { Cliente } from "./cliente";
+import { StatoFattura } from "./stato-fattura";
 
 export class Fattura {
     id?:number;
@@ -6,7 +7,11 @@ export class Fattura {
     numero!:number;
     anno!:number;
     importo!:number;
-    stato!:any;
+    stato!:StatoFattura;
     cliente!:Cliente;
     
+    constructor(){
+        this.cliente= new Cliente();
+        this.stato = new StatoFattura();
+    }
 }

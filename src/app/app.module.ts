@@ -15,6 +15,8 @@ import { FormNuovoClienteComponent } from './form-nuovo-cliente/form-nuovo-clien
 import { ClienteEditComponent } from './cliente-edit/cliente-edit.component';
 import { TabellaFattureComponent } from './tabella-fatture/tabella-fatture.component';
 import { HomeComponent } from './home/home.component';
+import { FatturaDetailComponent } from './fattura-detail/fattura-detail.component';
+import { ClienteFatturaComponent } from './cliente-fattura/cliente-fattura.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +28,9 @@ import { HomeComponent } from './home/home.component';
     FormNuovoClienteComponent,
     ClienteEditComponent,
     TabellaFattureComponent,
-    HomeComponent
+    HomeComponent,
+    FatturaDetailComponent,
+    ClienteFatturaComponent
   ],
   imports: [
     BrowserModule,

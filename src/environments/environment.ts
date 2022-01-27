@@ -9,6 +9,7 @@ export const environment = {
   deleteCliente:'http://epicode.online/epicodebeservice_v2/api/clienti/',
   getComuni:'http://epicode.online/epicodebeservice_v2/api/comuni?page=0&size=20&sort=id,ASC',
   getAllFatture:'http://epicode.online/epicodebeservice_v2/api/fatture?page=0&size=20&sort=id,ASC',
+  getFattureById:'http://epicode.online/epicodebeservice_v2/api/fatture/'
 
 
 };

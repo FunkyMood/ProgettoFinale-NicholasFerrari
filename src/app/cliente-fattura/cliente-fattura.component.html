@@ -1,0 +1,53 @@
+
+<div id= "card" class="card text-center my-5 ">
+    <div class="card-header ">
+        <h3>Dettagli Fattura per: <strong>{{cliente.ragioneSociale}}</strong></h3>
+    </div>
+    <div class="card-body">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">ID</th>
+                    <th scope="col">Data</th>
+                    <th scope="col">Numero</th>
+                    <th scope="col">Anno</th>
+                    <th scope="col">Importo</th>
+                    <th scope="col">Stato Fattura</th>
+                    <th scope="col">Cliente</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{fattura.id}}</td>
+                    <td>{{fattura.data}}</td>
+                    <td>{{fattura.numero}}</td>
+                    <td>{{fattura.anno}}</td>
+                    <td>{{fattura.importo}}</td>
+                    <td>{{fattura.stato.nome}}</td>
+                    <td>{{fattura.cliente.nomeContatto}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="card-footer text-muted">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Data Inserimento</th>
+                    <th scope="col">Data Ultimo Contatto</th>
+                    <th scope="col">Indirizzo Sede Operativa</th>
+                    <th scope="col">Indirizzo Sede Legale</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>{{fattura.cliente.dataInserimento}}</td>
+                    <td>{{fattura.cliente.dataUltimoContatto}}</td>
+                    <td>{{fattura.cliente.indirizzoSedeOperativa.via}} | {{fattura.cliente.indirizzoSedeOperativa.localita}} | {{fattura.cliente.indirizzoSedeOperativa.comune.nome}}</td>
+                    <td>{{fattura.cliente.indirizzoSedeLegale.via}} | {{fattura.cliente.indirizzoSedeLegale.localita}} | {{fattura.cliente.indirizzoSedeLegale.comune.nome}}</td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-primary" >Modifica</button>
+    </div>
+</div>

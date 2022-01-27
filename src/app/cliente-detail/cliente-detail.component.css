@@ -1,0 +1,31 @@
+#card{
+    background-color: #f6f6f6;
+    border: 0 solid #a0c7f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07)
+}
+
+table{
+    background-color: #f6f6f6;
+    border: 0 solid #a0c7f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07)
+}
+
+thead{
+    background-color: #f6f6f6;
+    border: 0 solid #a0c7f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07)
+}
+button {
+    color: white;
+    border: 1px solid #a0c7f0;
+    background-color: #66A6EB;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+}
+

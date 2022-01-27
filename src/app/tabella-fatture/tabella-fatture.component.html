@@ -21,7 +21,7 @@
         <td>{{item.stato.nome}}</td>
         <td>{{item.cliente.ragioneSociale}}</td>
         <td>
-          <button type="button" class="btn btn-success btn-sm">
+          <button type="button" class="btn btn-success btn-sm" (click)="detailFattura(item.id)">
             <i class="bi bi-info-square-fill"></i></button>
         </td>
       
