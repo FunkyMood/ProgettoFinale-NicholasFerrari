@@ -21,11 +21,7 @@ export class ClienteFatturaComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.route.params.subscribe(params => {
-      this.fatturaByCliente.getFatturaByCliente(params['id']).subscribe(fattura => {
-        this.fattura = fattura;
-      });
-    });
+    
   }
 
 }

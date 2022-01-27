@@ -26,4 +26,8 @@ export class FatturaDetailComponent implements OnInit {
     })
   }
 
+  modificaFattura(id:number){
+    this.router.navigate(['fatturaEdit/'+ id]);
+  }
+
 }

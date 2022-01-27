@@ -17,6 +17,8 @@ import { TabellaFattureComponent } from './tabella-fatture/tabella-fatture.compo
 import { HomeComponent } from './home/home.component';
 import { FatturaDetailComponent } from './fattura-detail/fattura-detail.component';
 import { ClienteFatturaComponent } from './cliente-fattura/cliente-fattura.component';
+import { FatturaEditComponent } from './fattura-edit/fattura-edit.component';
+import { FormNuovaFatturaComponent } from './form-nuova-fattura/form-nuova-fattura.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { ClienteFatturaComponent } from './cliente-fattura/cliente-fattura.compo
     TabellaFattureComponent,
     HomeComponent,
     FatturaDetailComponent,
-    ClienteFatturaComponent
+    ClienteFatturaComponent,
+    FatturaEditComponent,
+    FormNuovaFatturaComponent
   ],
   imports: [
     BrowserModule,

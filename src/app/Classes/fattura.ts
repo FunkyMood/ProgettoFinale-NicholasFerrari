@@ -2,7 +2,7 @@ import { Cliente } from "./cliente";
 import { StatoFattura } from "./stato-fattura";
 
 export class Fattura {
-    id?:number;
+    id!:number;
     data!:string;
     numero!:number;
     anno!:number;

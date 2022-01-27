@@ -1,10 +1,8 @@
-import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Cliente } from '../Classes/cliente';
 import { Comune } from '../Classes/comune';
 import { TipologiaCliente } from '../Classes/tipologia-cliente';
-import { Clienti } from '../Interfaces/clienti';
 import { ClientiService } from '../Services/clienti.service';
 
 @Component({
@@ -19,7 +17,6 @@ export class ClienteEditComponent implements OnInit {
   comuni:Comune[] = [];
 
   constructor(
-    private http: HttpClient,
     private clientiService: ClientiService,
     private router: Router,
     private route: ActivatedRoute,

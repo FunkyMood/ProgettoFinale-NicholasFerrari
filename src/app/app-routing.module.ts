@@ -4,6 +4,8 @@ import { ClienteDetailComponent } from './cliente-detail/cliente-detail.componen
 import { ClienteEditComponent } from './cliente-edit/cliente-edit.component';
 import { ClienteFatturaComponent } from './cliente-fattura/cliente-fattura.component';
 import { FatturaDetailComponent } from './fattura-detail/fattura-detail.component';
+import { FatturaEditComponent } from './fattura-edit/fattura-edit.component';
+import { FormNuovaFatturaComponent } from './form-nuova-fattura/form-nuova-fattura.component';
 import { FormNuovoClienteComponent } from './form-nuovo-cliente/form-nuovo-cliente.component';
 
 import { TabellaClientiComponent } from './tabella-clienti/tabella-clienti.component';
@@ -17,7 +19,10 @@ const routes: Routes = [
   {path:'clienteEdit/:id', component:ClienteEditComponent},
   {path:'fatture', component:TabellaFattureComponent},
   {path:'fattura/:id', component:FatturaDetailComponent},
-  {path:'cliente-fattura/:id', component:ClienteFatturaComponent}
+  {path:'cliente-fattura/:id', component:ClienteFatturaComponent},
+  {path:'fatturaEdit/:id', component:FatturaEditComponent},
+  {path:'nuovafattura', component:FormNuovaFatturaComponent}
+  
 ];
 
 @NgModule({

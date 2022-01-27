@@ -1,0 +1,71 @@
+input {
+    border: 0;
+    border-bottom: 1px solid #a0c7f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07);
+}
+
+input:focus {
+    border: 0;
+    border-bottom: 1px solid #c9ddf3;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07);
+
+}
+
+select {
+    width: 100%;
+    background-color: #f6f6f6;
+    border: 0;
+    border-bottom: 1px solid #a0c7f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07);
+}
+
+option {
+    width: 100%;
+    background-color: #f6f6f6;
+    border: 0;
+    border-bottom: 0 solid #a0c7f0;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07);
+
+}
+
+#main {
+
+    background-color: #e7fbe6;
+    border: 0 solid #a0c7f0;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07);
+}
+
+h3 {
+
+    background-color: #e7fbe6;
+    border: 0;
+    border-bottom: 0 solid #a0c7f0;
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07);
+}
+
+button {
+    color: white;
+    border: 1px solid #a0c7f0;
+    background-color: #66A6EB;
+    box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+}
+
+button:hover {
+    color: white;
+    border: 1px solid #a0c7f0;
+    background-color: #0252a7;
+    box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.07);
+}

@@ -1,4 +1,4 @@
 export class StatoFattura {
     id?:number;
-    nome:string= 'Pagata';
+    nome!:string;
 }
