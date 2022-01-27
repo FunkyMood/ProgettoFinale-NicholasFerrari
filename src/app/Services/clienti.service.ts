@@ -5,6 +5,9 @@ import { Clienti } from '../Interfaces/clienti';
 import { Cliente } from '../Classes/cliente';
 import { Comune } from '../Classes/comune';
 import { NewCliente } from '../Classes/new-cliente';
+import { TipologiaCliente } from '../Classes/tipologia-cliente';
+import { Comuni } from '../Interfaces/comuni';
+
 
 
 
@@ -22,16 +25,20 @@ export class ClientiService {
     return this.http.get<Cliente>(environment.getclientiById + id)
   }
   postNuovoCliente(cliente: NewCliente) {
-    return this.http.post<NewCliente>(environment.postNuovoCliente, + cliente)
+    return this.http.post<NewCliente>(environment.postNuovoCliente, cliente)
   }
   getTipiCLiente(){
-    return this.http.get(environment.gettipiCliente);
+    return this.http.get<TipologiaCliente[]>(environment.gettipiCliente);
   }
-  deleteCliente(cliente:Cliente){
-    return this.http.delete(environment.deleteCliente)
+  deleteCliente(item:Cliente){
+    return this.http.delete(environment.deleteCliente + item.id)
   }
   getComuni(){
-    return this.http.get<Comune>(environment.getComuni);
+    return this.http.get<Comuni>(environment.getComuni);
+  }
+
+  putClienteEdit(id:number, cliente:Cliente){
+    return this.http.put<Cliente>(environment.putClienteEdit + id, cliente);
   }
 
 

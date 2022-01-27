@@ -21,8 +21,10 @@ export class TabellaClientiComponent implements OnInit {
     this.router.navigate(['cliente/'+ id]);
 
   }
-  deleteCliente(cliente:Cliente){
-    this.clientiService.deleteCliente(cliente);
+  deleteCliente(item:Cliente){
+    this.clientiService.deleteCliente(item).subscribe(data => {
+      this.listaClienti = this.listaClienti.filter(el => el !== item)
+    })
   }
 
 }

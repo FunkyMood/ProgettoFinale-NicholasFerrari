@@ -1,1 +1,98 @@
-<p>Works</p>
+<div class="container-fluid  px-1 py-5 mx-auto">
+    <div class="row d-flex justify-content-center">
+        <div class="col-xl-7 col-lg-8 col-md-9 col-11 text-center">
+            <h3 class="mb-5">Modifica Cliente</h3>
+            <div class="card" id="main">
+                <h5 class="text-center mb-4 my-2 ">Inserisci i dati del tuo nuovo cliente</h5>
+                <form class="form-card mx-4">
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Ragione Sociale</strong><span class="text-danger">*</span></label>
+                            <input type="text" [(ngModel)]="cliente.ragioneSociale" name="ragioneSociale" placeholder="Inserisci Ragione Sociale" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Partita IVA</strong><span class="text-danger">*</span></label>
+                            <input type="text" [(ngModel)]="cliente.partitaIva" name="partitaIva" placeholder="Inserisci Partita IVA" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <div class="form-floating">
+                                <label for="floatingSelect"><strong>Tipologia Cliente</strong></label><br>
+                                <select class="form-select" [(ngModel)]="cliente.tipoCliente" name="tipo_cliente">
+                                    <option *ngFor="let item of tipiCliente" [ngValue]="item">{{item}}</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                             <label class="form-control-label px-3"><strong>PEC</strong><span class="text-danger"> *</span></label>
+                            <input type="email" [(ngModel)]="cliente.pec" name="pec" placeholder="Inserisci PEC"required>
+                        </div>
+
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Nome Contatto</strong></label>
+                            <input type="text" [(ngModel)]="cliente.nomeContatto" name="nomecontatto" placeholder="Inserisci Nome Contatto" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Cognome Contatto</strong></label>
+                            <input type="text" [(ngModel)]="cliente.cognomeContatto" name="cognomecontatto" placeholder="Inserisci Cognome Contatto" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex"> 
+                            <label class="form-control-label px-3"><strong>Email Contatto</strong></label>
+                            <input type="email" [(ngModel)]="cliente.emailContatto" name="emailcontatto" placeholder="Inserisci Email Contatto" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                             <label class="form-control-label px-3"><strong>Telefono Contatto</strong></label>
+                            <input type="text" [(ngModel)]="cliente.telefonoContatto" name="telefonocontatto" placeholder="Inserisci Telefono Contatto" required>
+                        </div>
+                    </div>
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label px-3"><strong>Telefono Sede Operativa</strong><span class="text-danger">*</span></label>
+                            <input type="text" [(ngModel)]="cliente.telefono" name="telefonosede" placeholder="Inserisci Telefono Sede Operativa" required>
+                        </div>
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                        </div>
+                    </div>
+                    
+                    <div class="row justify-content-between text-left">
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label mx-3"><strong>Indirizzo Sede Operativa</strong><span class="text-danger"> *</span></label>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeOperativa.via" name="viasedeoperativa"  placeholder="Inserisci Via Sede Operativa" required>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeOperativa.civico" name="civico_sedeoperativa" placeholder="Inserisci Civico Sede Operativa" required>
+                            <input type="text" class="my-2"  [(ngModel)]="cliente.indirizzoSedeOperativa.cap" name="cap_sedeoperativa"  placeholder="Inserisci CAP Sede Operativa" required>
+                            <input type="text"  class="my-2" [(ngModel)]="cliente.indirizzoSedeOperativa.localita" name="località_sedeoperativa" placeholder="Inserisci Località Sede Operativa" required>
+                            <div class="form-floating">
+                                <label for="floatingSelect"><strong>Scegli Comune di appartenenza</strong></label><br>
+                                <select class="form-select" [(ngModel)]="cliente.indirizzoSedeOperativa.comune" [ngModelOptions]="{standalone:true}">
+                                 <option *ngFor="let data of comuni" [ngValue]="data">{{data.nome}}</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group col-sm-6 flex-column d-flex">
+                            <label class="form-control-label mx-3"><strong>Indirizzo Sede Legale</strong><span class="text-danger">*</span></label>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.via" name="viasedeoperativa" placeholder="Inserisci Via Sede Operativa" required>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.civico" name="civico_sedeoperativa" placeholder="Inserisci Civico Sede Operativa" required>
+                            <input type="text" class="my-2" [(ngModel)]="cliente.indirizzoSedeLegale.cap" name="cap_sedeoperativa" placeholder="Inserisci CAP Sede Operativa" required>
+                            <input type="text" class="my-2"  [(ngModel)]="cliente.indirizzoSedeLegale.localita" name="località_sedeoperativa" placeholder="Inserisci Località Sede Operativa" required>
+                            <div class="form-floating ">
+                                <label for="floatingSelect"><strong>Scegli Comune di appartenenza</strong></label><br>
+                                <select class="form-select" [(ngModel)]="cliente.indirizzoSedeLegale.comune" [ngModelOptions]="{standalone:true}">
+                                 <option *ngFor="let data of comuni" [ngValue]="data">{{data.nome}}</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="btn my-2" (click)="modificaCliente(cliente.id, cliente)" >Modifica il Cliente</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

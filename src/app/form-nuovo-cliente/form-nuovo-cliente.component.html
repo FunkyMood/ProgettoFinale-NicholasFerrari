@@ -84,7 +84,7 @@
                             <div class="form-floating ">
                                 <label for="floatingSelect"><strong>Scegli Comune di appartenenza</strong></label><br>
                                 <select class="form-select" [(ngModel)]="cliente.indirizzoSedeLegale.comune" [ngModelOptions]="{standalone:true}">
-                                 <option *ngFor="let data of comuni" [ngValue]="data">{{data}}</option>
+                                 <option *ngFor="let data of comuni" [ngValue]="data">{{data.nome}}</option>
                                 </select>
                             </div>
                         </div>
