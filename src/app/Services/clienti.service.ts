@@ -7,6 +7,7 @@ import { Comune } from '../Classes/comune';
 import { NewCliente } from '../Classes/new-cliente';
 import { TipologiaCliente } from '../Classes/tipologia-cliente';
 import { Comuni } from '../Interfaces/comuni';
+import { Fattura } from '../Classes/fattura';
 
 
 
@@ -39,6 +40,9 @@ export class ClientiService {
 
   putClienteEdit(cliente:Cliente){
     return this.http.put<Cliente>(environment.putClienteEdit + cliente.id, cliente);
+  }
+  getFatturaByCliente(id:number){
+    return this.http.get<Fattura>('http://epicode.online/epicodebeservice_v2/api/fatture/cliente/'+id+'?page=0&size=20&sort=id,ASC')
   }
 
 

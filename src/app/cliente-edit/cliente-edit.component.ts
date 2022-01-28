@@ -34,7 +34,7 @@ export class ClienteEditComponent implements OnInit {
 
   modificaCliente(){
     this.clientiService.putClienteEdit(this.cliente).subscribe(response => console.log(response));
-    this.router.navigate(['']);
+    this.router.navigate(['tabella']);
   }
 
 }

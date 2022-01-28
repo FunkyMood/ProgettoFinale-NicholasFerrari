@@ -20,9 +20,7 @@ export class FattureService {
   getFattureById(id:number){
     return this.http.get<Fattura>(environment.getFattureById + id);
   }
-  getFatturaByCliente(){
-    return this.http.get<Cliente[]>(environment.getfatturaByCliente)
-  }
+
 
   getStatoFattura(){
     return this.http.get<StatiFattura>(environment.getStatoFattura);

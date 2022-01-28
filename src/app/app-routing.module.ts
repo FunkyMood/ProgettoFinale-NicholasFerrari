@@ -14,6 +14,7 @@ import { TabellaFattureComponent } from './tabella-fatture/tabella-fatture.compo
 const routes: Routes = [
 
   {path: '', component:TabellaClientiComponent},
+  {path: 'tabella', component:TabellaClientiComponent},
   {path:'cliente/:id', component: ClienteDetailComponent},
   {path:'nuovocliente', component:FormNuovoClienteComponent},
   {path:'clienteEdit/:id', component:ClienteEditComponent},

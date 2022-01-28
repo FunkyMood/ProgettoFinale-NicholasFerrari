@@ -31,8 +31,8 @@ export class ClienteDetailComponent implements OnInit {
     this.router.navigate(['clienteEdit/'+ id]);
   }
 
-  goToDetailFattura(id:number){
-    this.router.navigate(['cliente-fattura/' + id]);
+  goToDetailFattura(){
+   // this.router.navigate(['fattura/' + this.cliente.id]);
   }
 
 }
